@@ -21,7 +21,7 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/amerob/kaggle-for-ml-engineers.svg)](https://github.com/amerob/kaggle-for-ml-engineers/commits/main)
 
 <p align="center">
-  <img src="assets/kagglehb.png" alt="Kaggle for ML Engineers — book screenshot" width="400"/>
+  <img src="assets/kagglehb.png" alt="Kaggle for ML Engineers — book screenshot" width="500"/>
 </p>
 
 <br>
