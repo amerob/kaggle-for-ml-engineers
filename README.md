@@ -5,6 +5,7 @@
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![Kaggle Master](https://img.shields.io/badge/Kaggle-Double%20Master-gold.svg)](https://www.kaggle.com/amerhussein)
 [![Documentation](https://img.shields.io/badge/docs-mkdocs-blue.svg)](https://amerhussein.github.io/kaggle-for-ml-engineers/)
+<img width="421" height="415" alt="kagglehb" src="https://github.com/user-attachments/assets/403b07f1-1107-4b5f-8ec0-03861d03f6f9" />
 
 > **From Competition Notebooks to Production Systems: A Battle-Tested Framework for ML Engineers**
 
