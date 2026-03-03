@@ -380,5 +380,5 @@ We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guid
 
 <p align="center">
   <strong>Built with passion by ML engineers, for ML engineers.</strong><br>
-  <em>From competitions to production — one system at a time.</em>
+  <em>From competitions to production, one system at a time.</em>
 </p>
