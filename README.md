@@ -25,8 +25,7 @@
 </p>
 
 <br>
-<br>
-<br>
+
 
 > **From Competition Notebooks to Production Systems**
 
