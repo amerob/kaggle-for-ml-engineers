@@ -11,8 +11,10 @@
 <img width="421" height="415" alt="kagglehb" src="https://github.com/user-attachments/assets/403b07f1-1107-4b5f-8ec0-03861d03f6f9" />
 
 <br>
+<br>
+<br>
 
-> **From Competition Notebooks to Production Systems: A Battle-Tested Framework for ML Engineers**
+> **From Competition Notebooks to Production Systems**
 
 ---
 
