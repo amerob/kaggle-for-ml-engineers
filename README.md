@@ -11,7 +11,7 @@
 <br>
 
 <p align="center">
-  <img src="assets/kagglehb.png" alt="Kaggle for ML Engineers — book screenshot" width="700"/>
+  <img src="assets/kagglehb.png" alt="Kaggle for ML Engineers — book screenshot" width="400"/>
 </p>
 
 <br>
