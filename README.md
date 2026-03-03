@@ -17,7 +17,7 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![Kaggle Master](https://img.shields.io/badge/Kaggle-Double%20Master-gold.svg)](https://www.kaggle.com/amerhu)
-[![Documentation](https://img.shields.io/badge/docs-mkdocs-blue.svg)](https://amerhussein.github.io/kaggle-for-ml-engineers/)
+[![Documentation](https://img.shields.io/badge/docs-mkdocs-blue.svg)](https://github.com/amerob/kaggle-for-ml-engineers/blob/main/assets/kaggle_Handbook_Amer.pdf)
 [![GitHub last commit](https://img.shields.io/github/last-commit/amerob/kaggle-for-ml-engineers.svg)](https://github.com/amerob/kaggle-for-ml-engineers/commits/main)
 
 <p align="center">
