@@ -42,16 +42,16 @@ Whether you're climbing the Kaggle leaderboard, preparing for ML engineering int
 
 ### 1. Comprehensive Coverage (12 Core Parts)
 
-| Component | Description | Production Ready |
-|-----------|-------------|------------------|
-| **Strategy & Production** | Competition lifecycle, Kaggle vs Production ML, ROI framework | Yes |
-| **CV Architecture** | Cross-validation design, leakage detection, time-aware splits | Yes |
-| **Feature Engineering** | Automated pipelines, target encoding, groupby aggregations | Yes |
-| **Model Playbooks** | LightGBM, XGBoost, CatBoost, Neural Networks, Transformers | Yes |
-| **Ensembling Systems** | Stacking, blending, weighted averaging with OOF management | Yes |
-| **Advanced Tactics** | Pseudo-labeling, knowledge distillation, adversarial validation | Yes |
-| **Production Reality** | MLOps, monitoring, drift detection, model governance | Yes |
-| **Career Strategy** | 90-day plan, portfolio building, interview preparation | Yes |
+| Component | Description | 
+|-----------|-------------|
+| **Strategy & Production** | Competition lifecycle, Kaggle vs Production ML, ROI framework 
+| **CV Architecture** | Cross-validation design, leakage detection, time-aware splits |
+| **Feature Engineering** | Automated pipelines, target encoding, groupby aggregations | 
+| **Model Playbooks** | LightGBM, XGBoost, CatBoost, Neural Networks, Transformers | 
+| **Ensembling Systems** | Stacking, blending, weighted averaging with OOF management | 
+| **Advanced Tactics** | Pseudo-labeling, knowledge distillation, adversarial validation | 
+| **Production Reality** | MLOps, monitoring, drift detection, model governance | 
+| **Career Strategy** | 90-day plan, portfolio building, interview preparation | 
 
 ### 2. Executable Python Framework
 
