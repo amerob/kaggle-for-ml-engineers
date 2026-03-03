@@ -24,9 +24,9 @@
 
 ---
 
-## Executive Summary
+## Summary
 
-This repository contains the complete framework, code, and documentation for **"Kaggle for ML Engineers: Competitive Systems & Applied Architecture"** — a comprehensive guide that bridges the gap between competitive machine learning and production-grade ML systems.
+This repository contains the complete framework, code, and documentation for **"Kaggle for ML Engineers: Competitive Systems & Applied Architecture"**, a comprehensive guide that bridges the gap between competitive machine learning and production-grade ML systems.
 
 Written by a **Double Kaggle Master** with extensive experience in both competition environments and enterprise ML deployment, this resource provides:
 
