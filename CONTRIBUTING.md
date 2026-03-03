@@ -481,8 +481,8 @@ We follow [Semantic Versioning](https://semver.org/):
 
 If you have questions about contributing:
 
-- **General questions**: Open a [Discussion](https://github.com/amerhussein/kaggle-for-ml-engineers/discussions)
-- **Bug reports**: Open an [Issue](https://github.com/amerhussein/kaggle-for-ml-engineers/issues)
-- **Security issues**: Email [amerhussein@gmail.com](mailto:amerhussein@gmail.com) directly
+- **General questions**: Open a [Discussion](https://github.com/amerob/kaggle-for-ml-engineers/discussions)
+- **Bug reports**: Open an [Issue](https://github.com/amerob/kaggle-for-ml-engineers/issues)
+- **Security issues**: Email [amerjoahub@gmail.com](mailto:amerjoahub@gmail.com) directly
 
 Thank you for contributing to Kaggle for ML Engineers!
