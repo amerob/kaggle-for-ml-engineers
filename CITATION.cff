@@ -1,0 +1,94 @@
+cff-version: 1.2.0
+message: "If you use this software or reference this work, please cite it as below."
+type: software
+title: "Kaggle for ML Engineers: Competitive Systems & Applied Architecture"
+abstract: >
+  A comprehensive framework bridging competitive machine learning and production-grade 
+  ML systems. This resource provides battle-tested patterns for cross-validation, 
+  feature engineering, model ensembling, and production deployment. Written by a 
+  Double Kaggle Master, it covers the entire ML lifecycle from competition strategy 
+  to production reality, including a 90-day career acceleration plan for ML engineers.
+authors:
+  - family-names: "Hussein"
+    given-names: "Amer"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+    affiliation: "Independent AI/ML Engineer"
+    email: "amerhussein@gmail.com"
+version: "2024-2025 Edition"
+date-released: 2025-01-01
+keywords:
+  - machine learning
+  - kaggle
+  - competitive data science
+  - production ML
+  - MLOps
+  - feature engineering
+  - model ensembling
+  - cross-validation
+  - Python
+  - LightGBM
+  - XGBoost
+  - CatBoost
+  - deep learning
+  - transformers
+license: CC-BY-4.0
+repository-code: "https://github.com/amerhussein/kaggle-for-ml-engineers"
+url: "https://amerhussein.github.io/kaggle-for-ml-engineers/"
+identifiers:
+  - type: url
+    value: "https://github.com/amerhussein/kaggle-for-ml-engineers"
+    description: "GitHub Repository"
+  - type: url
+    value: "https://amerhussein.github.io/kaggle-for-ml-engineers/"
+    description: "Documentation Website"
+contact:
+  - family-names: "Hussein"
+    given-names: "Amer"
+    email: "amerhussein@gmail.com"
+preferred-citation:
+  type: software
+  title: "Kaggle for ML Engineers: Competitive Systems & Applied Architecture"
+  authors:
+    - family-names: "Hussein"
+      given-names: "Amer"
+  year: 2025
+  version: "2024-2025 Edition"
+  url: "https://github.com/amerhussein/kaggle-for-ml-engineers"
+references:
+  - type: book
+    title: "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    authors:
+      - family-names: "Géron"
+        given-names: "Aurélien"
+    year: 2022
+    publisher: "O'Reilly Media"
+  - type: article
+    title: "XGBoost: A Scalable Tree Boosting System"
+    authors:
+      - family-names: "Chen"
+        given-names: "Tianqi"
+      - family-names: "Guestrin"
+        given-names: "Carlos"
+    year: 2016
+    journal: "Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining"
+  - type: article
+    title: "LightGBM: A Highly Efficient Gradient Boosting Decision Tree"
+    authors:
+      - family-names: "Ke"
+        given-names: "Guolin"
+      - family-names: "Meng"
+        given-names: "Qi"
+      - family-names: "Finley"
+        given-names: "Thomas"
+      - family-names: "Wang"
+        given-names: "Taifeng"
+      - family-names: "Chen"
+        given-names: "Wei"
+      - family-names: "Ma"
+        given-names: "Weidong"
+      - family-names: "Ye"
+        given-names: "Qiwei"
+      - family-names: "Liu"
+        given-names: "Tie-Yan"
+    year: 2017
+    journal: "Advances in Neural Information Processing Systems"

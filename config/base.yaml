@@ -1,0 +1,322 @@
+# Kaggle for ML Engineers - Base Configuration Template
+# This is a production-grade configuration for ML competitions
+# Author: Amer Hussein
+
+# =============================================================================
+# EXPERIMENT CONFIGURATION
+# =============================================================================
+experiment:
+  name: "kaggle_competition_v1"
+  seed: 42
+  tags:
+    - "competition"
+    - "baseline"
+    - "v1.0"
+  description: "Baseline model for Kaggle competition"
+  output_dir: "./outputs"
+  save_predictions: true
+  save_models: true
+
+# =============================================================================
+# DATA CONFIGURATION
+# =============================================================================
+data:
+  train_path: "data/train.csv"
+  test_path: "data/test.csv"
+  sample_submission_path: "data/sample_submission.csv"
+  target_col: "target"
+  id_col: "id"
+  
+  # Data preprocessing
+  missing_strategy: "median"  # Options: median, mean, mode, constant
+  missing_constant: -999
+  
+  # Outlier handling
+  outlier_method: "iqr"  # Options: iqr, zscore, none
+  outlier_threshold: 1.5
+  
+  # Validation split (if not using CV)
+  validation_size: 0.2
+  validation_stratify: true
+
+# =============================================================================
+# FEATURE CONFIGURATION
+# =============================================================================
+features:
+  # Column specifications
+  categorical_columns:
+    - "cat_1"
+    - "cat_2"
+    - "cat_3"
+  
+  numerical_columns:
+    - "num_1"
+    - "num_2"
+    - "num_3"
+  
+  # Columns to drop
+  drop_columns: []
+  
+  # Target encoding configuration
+  target_encoding:
+    enabled: true
+    smoothing: 10.0
+    min_samples_leaf: 2
+    noise: 0.01
+    n_folds: 5
+  
+  # Groupby features configuration
+  groupby_features:
+    enabled: true
+    groupby_columns:
+      - "cat_1"
+      - "cat_2"
+    aggregations:
+      - "mean"
+      - "std"
+      - "min"
+      - "max"
+      - "median"
+      - "count"
+      - "nunique"
+    diff_features: true
+    ratio_features: true
+    hierarchical: true
+  
+  # Polynomial features
+  polynomial_features:
+    enabled: false
+    degree: 2
+    interaction_only: true
+  
+  # Feature selection
+  feature_selection:
+    enabled: false
+    method: "mutual_info"  # Options: mutual_info, chi2, f_classif, rfe
+    k: 50
+
+# =============================================================================
+# MODEL CONFIGURATION
+# =============================================================================
+model:
+  name: "lightgbm"  # Options: lightgbm, xgboost, catboost, sklearn
+  
+  # LightGBM parameters
+  lightgbm:
+    objective: "binary"
+    metric: "auc"
+    boosting_type: "gbdt"
+    num_leaves: 31
+    max_depth: -1
+    learning_rate: 0.05
+    n_estimators: 1000
+    subsample: 0.8
+    colsample_bytree: 0.8
+    reg_alpha: 0.0
+    reg_lambda: 0.0
+    min_child_samples: 20
+    min_child_weight: 0.001
+    random_state: 42
+    n_jobs: -1
+    verbose: -1
+    early_stopping_rounds: 100
+  
+  # XGBoost parameters
+  xgboost:
+    objective: "binary:logistic"
+    eval_metric: "auc"
+    booster: "gbtree"
+    max_depth: 6
+    learning_rate: 0.05
+    n_estimators: 1000
+    subsample: 0.8
+    colsample_bytree: 0.8
+    colsample_bylevel: 1.0
+    reg_alpha: 0.0
+    reg_lambda: 1.0
+    min_child_weight: 1
+    gamma: 0.0
+    random_state: 42
+    n_jobs: -1
+    tree_method: "hist"
+    early_stopping_rounds: 100
+  
+  # CatBoost parameters
+  catboost:
+    objective: "Logloss"
+    eval_metric: "AUC"
+    depth: 6
+    learning_rate: 0.05
+    iterations: 1000
+    l2_leaf_reg: 3.0
+    random_seed: 42
+    verbose: 100
+    early_stopping_rounds: 100
+    use_best_model: true
+    thread_count: -1
+  
+  # Sklearn models (for baseline comparisons)
+  sklearn:
+    model_type: "random_forest"  # Options: random_forest, logistic_regression
+    random_forest:
+      n_estimators: 100
+      max_depth: 10
+      min_samples_split: 2
+      min_samples_leaf: 1
+      random_state: 42
+      n_jobs: -1
+    logistic_regression:
+      C: 1.0
+      penalty: "l2"
+      solver: "lbfgs"
+      max_iter: 1000
+      random_state: 42
+
+# =============================================================================
+# CROSS-VALIDATION CONFIGURATION
+# =============================================================================
+cv:
+  n_folds: 5
+  strategy: "stratified"  # Options: stratified, grouped, time, kfold
+  shuffle: true
+  random_state: 42
+  
+  # Grouped CV (when strategy is "grouped")
+  group_col: null
+  
+  # Time-based CV (when strategy is "time")
+  time_col: null
+  
+  # Stratification settings
+  stratify_col: "target"
+  
+  # Purged CV for time series
+  purge_gap: 0
+  embargo_pct: 0.0
+
+# =============================================================================
+# ENSEMBLING CONFIGURATION
+# =============================================================================
+ensembling:
+  enabled: false
+  method: "stacking"  # Options: stacking, blending, hill_climbing
+  
+  # Stacking configuration
+  stacking:
+    base_models:
+      - "lightgbm"
+      - "xgboost"
+      - "catboost"
+    meta_model: "logistic_regression"
+    n_folds: 5
+    use_proba: true
+  
+  # Hill climbing configuration
+  hill_climbing:
+    max_iterations: 1000
+    step_size: 0.01
+    patience: 50
+    minimize: false  # false for maximizing metric (e.g., AUC)
+
+# =============================================================================
+# ADVANCED TACTICS
+# =============================================================================
+tactics:
+  # Pseudo-labeling
+  pseudo_labeling:
+    enabled: false
+    confidence_threshold: 0.9
+    max_iterations: 3
+    sample_ratio: 0.5
+  
+  # Model distillation
+  distillation:
+    enabled: false
+    temperature: 3.0
+    teacher_models:
+      - "lightgbm"
+      - "xgboost"
+    student_model: "lightgbm_small"
+  
+  # Adversarial validation
+  adversarial_validation:
+    enabled: false
+    threshold: 0.5
+
+# =============================================================================
+# LOGGING CONFIGURATION
+# =============================================================================
+logging:
+  # MLflow tracking
+  mlflow:
+    enabled: true
+    tracking_uri: "file:./mlruns"
+    experiment_name: "kaggle_competition"
+    artifact_location: "./artifacts"
+  
+  # Weights & Biases (alternative)
+  wandb:
+    enabled: false
+    project: "kaggle-competition"
+    entity: null
+  
+  # Console logging
+  console:
+    level: "INFO"  # Options: DEBUG, INFO, WARNING, ERROR
+    format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  
+  # File logging
+  file:
+    enabled: true
+    path: "./logs/training.log"
+    level: "DEBUG"
+  
+  # TensorBoard
+  tensorboard:
+    enabled: false
+    log_dir: "./logs/tensorboard"
+
+# =============================================================================
+# HARDWARE CONFIGURATION
+# =============================================================================
+hardware:
+  use_gpu: false
+  gpu_id: 0
+  mixed_precision: false
+  num_workers: -1  # -1 for auto
+  
+  # cuDF for GPU-accelerated pandas
+  use_cudf: false
+
+# =============================================================================
+# EVALUATION CONFIGURATION
+# =============================================================================
+evaluation:
+  primary_metric: "auc"
+  metrics:
+    - "auc"
+    - "accuracy"
+    - "f1"
+    - "precision"
+    - "recall"
+  
+  # Classification specific
+  classification:
+    average: "binary"  # Options: binary, micro, macro, weighted
+    pos_label: 1
+  
+  # Regression specific
+  regression:
+    metrics:
+      - "rmse"
+      - "mae"
+      - "r2"
+
+# =============================================================================
+# SUBMISSION CONFIGURATION
+# =============================================================================
+submission:
+  file_name: "submission.csv"
+  compression: null  # Options: gzip, zip, null
+  float_format: "%.6f"
+  index: false

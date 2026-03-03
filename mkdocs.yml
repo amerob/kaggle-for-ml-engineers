@@ -1,0 +1,296 @@
+# =============================================================================
+# MkDocs Configuration for Kaggle for ML Engineers
+# Material Theme with Professional Documentation Setup
+# =============================================================================
+
+# Site metadata
+site_name: "Kaggle for ML Engineers"
+site_description: "Competitive Systems & Applied Architecture - From Competition Notebooks to Production Systems"
+site_author: "Amer Hussein"
+site_url: "https://amerhussein.github.io/kaggle-for-ml-engineers/"
+
+# Repository information
+repo_name: "amerhussein/kaggle-for-ml-engineers"
+repo_url: "https://github.com/amerhussein/kaggle-for-ml-engineers"
+edit_uri: "edit/main/docs/"
+
+# Copyright
+copyright: "Copyright &copy; 2025 Amer Hussein | Licensed under CC BY 4.0"
+
+# =============================================================================
+# Theme Configuration (Material)
+# =============================================================================
+theme:
+  name: material
+  
+  # Customization
+  custom_dir: docs/overrides
+  
+  # Color palette (light/dark mode toggle)
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  
+  # Font settings
+  font:
+    text: Roboto
+    code: Roboto Mono
+  
+  # Language
+  language: en
+  
+  # Features
+  features:
+    # Navigation
+    - navigation.instant          # Instant navigation (no page reload)
+    - navigation.instant.progress # Show progress indicator
+    - navigation.tracking         # Anchor tracking in URL
+    - navigation.tabs             # Top-level sections as tabs
+    - navigation.tabs.sticky      # Sticky navigation tabs
+    - navigation.sections         # Render sections as groups
+    - navigation.expand           # Expand all collapsible sections
+    - navigation.path             # Show navigation path
+    - navigation.top              # Back-to-top button
+    
+    # Search
+    - search.suggest              # Search suggestions
+    - search.highlight            # Highlight search terms
+    - search.share                # Share search queries
+    
+    # Content
+    - content.code.copy           # Copy code button
+    - content.code.annotate       # Code annotations
+    - content.tabs.link           # Link content tabs
+    - content.tooltips            # Tooltips
+    
+    # Header
+    - header.autohide             # Auto-hide header
+  
+  # Icon settings
+  icon:
+    logo: material/chart-line
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+
+# =============================================================================
+# Plugins
+# =============================================================================
+plugins:
+  # Built-in search
+  - search:
+      separator: '[\s\-,:!=\[\]()"/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+      lang:
+        - en
+  
+  # Minify HTML/CSS/JS
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+  
+  # Git revision date
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: date
+      fallback_to_build_date: false
+  
+  # Privacy (external links)
+  - privacy:
+      externals: all
+      assets: true
+  
+  # Social cards (optional)
+  # - social:
+  #     cards: true
+  
+  # RSS feed (optional)
+  # - rss:
+  #     match_path: ".*"
+  #     date_from_meta:
+  #       as_creation: date
+
+# =============================================================================
+# Markdown Extensions
+# =============================================================================
+markdown_extensions:
+  # Python Markdown
+  - abbr                          # Abbreviations
+  - admonition                    # Call-out boxes
+  - attr_list                     # Attribute lists
+  - def_list                      # Definition lists
+  - footnotes                     # Footnotes
+  - md_in_html                    # Markdown in HTML
+  - toc:
+      permalink: true             # Permalink headers
+      toc_depth: 3                # Table of contents depth
+  
+  # PyMdown Extensions
+  - pymdownx.arithmatex:          # MathJax support
+      generic: true
+  - pymdownx.betterem:            # Better emphasis
+      smart_enable: all
+  - pymdownx.caret                # Superscript
+  - pymdownx.mark                 # Highlighting
+  - pymdownx.tilde                # Subscript
+  - pymdownx.critic               # Critic markup
+  - pymdownx.details              # Collapsible blocks
+  - pymdownx.highlight:           # Syntax highlighting
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite         # Inline code highlighting
+  - pymdownx.keys                 # Keyboard keys
+  - pymdownx.magiclink:           # Auto-link URLs
+      repo_url_shorthand: true
+      user: amerhussein
+      repo: kaggle-for-ml-engineers
+  - pymdownx.snippets             # Content snippets
+  - pymdownx.superfences:         # Nested code blocks
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:              # Content tabs
+      alternate_style: true
+  - pymdownx.tasklist:            # Task lists
+      custom_checkbox: true
+  - pymdownx.emoji:               # Emoji support
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+# =============================================================================
+# Extra CSS & JavaScript
+# =============================================================================
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/analytics.js
+
+# =============================================================================
+# Extra Configuration
+# =============================================================================
+extra:
+  # Social links
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/amerhussein
+      name: GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/amer-hussein
+      name: LinkedIn
+    - icon: fontawesome/brands/kaggle
+      link: https://www.kaggle.com/amerhussein
+      name: Kaggle
+  
+  # Analytics (optional)
+  # analytics:
+  #   provider: google
+  #   property: G-XXXXXXXXXX
+  
+  # Version
+  version:
+    provider: mike
+    default: stable
+  
+  # Generator notice
+  generator: true
+  
+  # Consent
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+
+# =============================================================================
+# Navigation Structure
+# =============================================================================
+nav:
+  - Home: index.md
+  
+  - Strategy & Production:
+      - Overview: 01-strategy-production.md
+  
+  - Cross-Validation Architecture:
+      - CV Design: 02-cv-architecture.md
+  
+  - Feature Engineering:
+      - Techniques: 03-feature-engineering.md
+  
+  - Model Playbooks:
+      - Algorithms: 04-model-playbooks.md
+  
+  - Ensembling Systems:
+      - Stacking & Blending: 05-ensembling-systems.md
+  
+  - Advanced Tactics:
+      - Pseudo-labeling & Distillation: 06-advanced-tactics.md
+  
+  - Production Reality:
+      - MLOps & Deployment: 07-production-reality.md
+  
+  - Career Strategy:
+      - 90-Day Plan: 08-career-strategy-and-90-day-plan.md
+  
+  - API Reference:
+      - Features: api/features.md
+      - Models: api/models.md
+      - Ensembling: api/ensembling.md
+      - Tactics: api/tactics.md
+  
+  - About:
+      - Contributing: contributing.md
+      - License: license.md
+      - Changelog: changelog.md
+
+# =============================================================================
+# Validation (strict mode for CI)
+# =============================================================================
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
+
+# =============================================================================
+# Watch directories for live reload
+# =============================================================================
+watch:
+  - docs
+  - src
+  - config
+
+# =============================================================================
+# Dev server settings
+# =============================================================================
+dev_addr: 127.0.0.1:8000
+
+# =============================================================================
+# Extra files to include
+# =============================================================================
+extra_templates:
+  - 404.html

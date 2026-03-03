@@ -1,0 +1,194 @@
+# =============================================================================
+# Kaggle for ML Engineers: Competitive Systems & Applied Architecture
+# Python Dependencies
+# =============================================================================
+# 
+# Installation:
+#   pip install -r requirements.txt
+#
+# For GPU support (optional):
+#   pip install cudf-cu11 cuml-cu11 cugraph-cu11 --extra-index-url=https://pypi.nvidia.com
+#
+# Python version: >=3.9
+# =============================================================================
+
+# =============================================================================
+# Core Data Science Stack
+# =============================================================================
+numpy>=1.24.0,<2.0.0          # Numerical computing
+pandas>=2.0.0,<3.0.0          # Data manipulation and analysis
+scipy>=1.10.0,<2.0.0          # Scientific computing
+scikit-learn>=1.3.0,<2.0.0    # Machine learning utilities
+
+# =============================================================================
+# Gradient Boosting Libraries
+# =============================================================================
+lightgbm>=4.0.0,<5.0.0        # LightGBM gradient boosting
+xgboost>=2.0.0,<3.0.0         # XGBoost gradient boosting
+catboost>=1.2.0,<2.0.0        # CatBoost gradient boosting
+
+# =============================================================================
+# Deep Learning Frameworks
+# =============================================================================
+torch>=2.0.0,<3.0.0           # PyTorch deep learning framework
+torchvision>=0.15.0,<1.0.0    # PyTorch vision utilities
+torchaudio>=2.0.0,<3.0.0      # PyTorch audio utilities
+
+# =============================================================================
+# Transformers & NLP
+# =============================================================================
+transformers>=4.30.0,<5.0.0   # Hugging Face Transformers
+peft>=0.4.0,<1.0.0            # Parameter-efficient fine-tuning
+accelerate>=0.20.0,<1.0.0     # Hugging Face Accelerate
+tokenizers>=0.13.0,<1.0.0     # Fast tokenization
+sentencepiece>=0.1.99         # Text tokenization
+
+# =============================================================================
+# Computer Vision
+# =============================================================================
+timm>=0.9.0,<1.0.0            # PyTorch Image Models
+opencv-python>=4.8.0,<5.0.0   # Computer vision library
+Pillow>=10.0.0,<11.0.0        # Image processing
+albumentations>=1.3.0,<2.0.0  # Image augmentation
+
+# =============================================================================
+# Feature Engineering
+# =============================================================================
+featuretools>=1.0.0,<2.0.0     # Automated feature engineering
+category_encoders>=2.6.0,<3.0.0  # Categorical encoding
+feature-engine>=1.6.0,<2.0.0   # Feature engineering utilities
+
+# =============================================================================
+# High-Performance Data Processing
+# =============================================================================
+polars>=0.18.0,<1.0.0         # Fast DataFrame library
+pyarrow>=12.0.0,<15.0.0       # Columnar data format
+fastparquet>=2023.0.0         # Parquet file support
+
+# =============================================================================
+# RAPIDS GPU Acceleration (Optional)
+# Install separately: pip install cudf-cu11 cuml-cu11 --extra-index-url=https://pypi.nvidia.com
+# cudf-cu11>=23.0.0             # GPU-accelerated DataFrames
+# cuml-cu11>=23.0.0             # GPU-accelerated ML
+# cugraph-cu11>=23.0.0          # GPU-accelerated graph analytics
+
+# =============================================================================
+# Experiment Tracking & MLOps
+# =============================================================================
+mlflow>=2.0.0,<3.0.0          # ML experiment tracking
+wandb>=0.15.0,<1.0.0          # Weights & Biases tracking
+dvc>=3.0.0,<4.0.0             # Data version control
+
+# =============================================================================
+# Hyperparameter Optimization
+# =============================================================================
+optuna>=3.2.0,<4.0.0          # Bayesian optimization
+ray[tune]>=2.6.0,<3.0.0       # Distributed hyperparameter tuning
+hyperopt>=0.2.7,<1.0.0        # Hyperparameter optimization
+
+# =============================================================================
+# Model Interpretation
+# =============================================================================
+shap>=0.42.0,<1.0.0           # SHAP values for model interpretation
+lime>=0.2.0,<1.0.0            # LIME explanations
+eli5>=0.13.0,<1.0.0           # Model debugging
+
+# =============================================================================
+# Statistical Analysis
+# =============================================================================
+statsmodels>=0.14.0,<1.0.0    # Statistical models
+pingouin>=0.5.3,<1.0.0        # Statistical tests
+
+# =============================================================================
+# Visualization
+# =============================================================================
+matplotlib>=3.7.0,<4.0.0      # Static visualization
+seaborn>=0.12.0,<1.0.0        # Statistical visualization
+plotly>=5.15.0,<6.0.0         # Interactive visualization
+bokeh>=3.2.0,<4.0.0           # Interactive web visualization
+
+# =============================================================================
+# Jupyter & Development Environment
+# =============================================================================
+jupyter>=1.0.0,<2.0.0         # Jupyter notebook
+jupyterlab>=4.0.0,<5.0.0      # JupyterLab environment
+ipython>=8.14.0,<9.0.0        # Enhanced Python shell
+notebook>=7.0.0,<8.0.0        # Jupyter notebook server
+
+# =============================================================================
+# Utilities
+# =============================================================================
+pyyaml>=6.0,<7.0              # YAML configuration parsing
+tqdm>=4.65.0,<5.0.0           # Progress bars
+joblib>=1.3.0,<2.0.0          # Parallel processing
+python-dotenv>=1.0.0,<2.0.0   # Environment variable management
+click>=8.1.0,<9.0.0           # Command-line interface
+pydantic>=2.0.0,<3.0.0        # Data validation
+rich>=13.5.0,<14.0.0          # Rich text and formatting
+loguru>=0.7.0,<1.0.0          # Modern logging
+
+# =============================================================================
+# Data Validation & Quality
+# =============================================================================
+great-expectations>=0.17.0,<1.0.0  # Data validation
+pandera>=0.16.0,<1.0.0        # DataFrame validation
+deepchecks>=0.17.0,<1.0.0     # ML model validation
+
+# =============================================================================
+# Documentation & Publishing
+# =============================================================================
+mkdocs>=1.5.0,<2.0.0          # Documentation site generator
+mkdocs-material>=9.0.0,<10.0.0  # Material theme for MkDocs
+mkdocstrings[python]>=0.22.0,<1.0.0  # Python API documentation
+mkdocs-minify-plugin>=0.7.0,<1.0.0  # Minify HTML/CSS/JS
+pymdown-extensions>=10.1.0,<11.0.0  # Markdown extensions
+
+# =============================================================================
+# PDF Generation
+# =============================================================================
+pypandoc>=1.11.0,<2.0.0       # Python wrapper for pandoc
+weasyprint>=59.0.0,<60.0.0    # HTML to PDF conversion
+markdown>=3.4.0,<4.0.0        # Markdown processing
+
+# =============================================================================
+# Testing & Quality Assurance
+# =============================================================================
+pytest>=7.0.0,<8.0.0          # Testing framework
+pytest-cov>=4.1.0,<5.0.0      # Coverage reporting
+pytest-xdist>=3.3.0,<4.0.0    # Parallel test execution
+hypothesis>=6.82.0,<7.0.0     # Property-based testing
+
+# =============================================================================
+# Code Quality & Formatting
+# =============================================================================
+black>=23.0.0,<24.0.0         # Code formatter
+isort>=5.12.0,<6.0.0          # Import sorting
+flake8>=6.0.0,<7.0.0          # Linting
+flake8-docstrings>=1.7.0,<2.0.0  # Docstring linting
+mypy>=1.0.0,<2.0.0            # Static type checking
+pre-commit>=3.3.0,<4.0.0      # Git hooks
+bandit>=1.7.0,<2.0.0          # Security linting
+safety>=2.3.0,<3.0.0          # Dependency security check
+
+# =============================================================================
+# Optional: Cloud & Deployment
+# =============================================================================
+# boto3>=1.28.0,<2.0.0          # AWS SDK
+# google-cloud-storage>=2.10.0  # Google Cloud Storage
+# azure-storage-blob>=12.17.0   # Azure Blob Storage
+# kubernetes>=27.0.0,<28.0.0    # Kubernetes client
+
+# =============================================================================
+# Optional: Distributed Computing
+# =============================================================================
+# dask[complete]>=2023.0.0      # Parallel computing
+# distributed>=2023.0.0         # Dask distributed
+# pyspark>=3.4.0,<4.0.0         # Apache Spark
+
+# =============================================================================
+# Version Constraints Notes
+# =============================================================================
+# - Upper bounds (<X.0.0) prevent breaking changes from major version updates
+# - Lower bounds (>=X.Y.Z) ensure required features are available
+# - Update constraints periodically after testing compatibility
+# =============================================================================
