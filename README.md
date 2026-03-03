@@ -1,6 +1,8 @@
 # Kaggle for ML Engineers: Competitive Systems & Applied Architecture
 
-[![Build Status](https://github.com/amerob/kaggle-for-ml-engineers/workflows/Build%20and%20Deploy/badge.svg)](https://github.com/amerob/kaggle-for-ml-engineers/actions)
+<!-- [![Build Status](https://github.com/amerob/kaggle-for-ml-engineers/workflows/Build%20and%20Deploy/badge.svg)](https://github.com/amerob/kaggle-for-ml-engineers/actions)  -->
+
+
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![Kaggle Master](https://img.shields.io/badge/Kaggle-Double%20Master-gold.svg)](https://www.kaggle.com/amerhussein)
